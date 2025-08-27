@@ -1,0 +1,22 @@
+{
+  "name": "video-sharing-backend-local-auth",
+  "version": "1.0.0",
+  "description": "Video sharing backend with local JWT auth + roles (creator/consumer), Azure Blob, Cosmos, Sentiment, App Insights, CI/CD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.2.0",
+    "@azure/storage-blob": "^12.17.0",
+    "applicationinsights": "^2.9.5",
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
