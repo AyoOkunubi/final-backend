@@ -34,6 +34,14 @@ app.use('/api/comments', commentRoutes);
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 app.use((err, req, res, next) => { console.error('Unhandled error:', err); res.status(500).json({ error: 'Internal Server Error' }); });
 
+const cors = require("cors");
+app.use(cors({
+  origin: ["https://happy-stone-091797803.2.azurestaticapps.net/", "http://localhost:3000"],
+  methods: ["GET","POST","OPTIONS"],
+  allowedHeaders: ["Content-Type","Authorization"],
+  credentials: false
+}));
+
 const PORT = process.env.PORT || 8080;
 (async () => {
   try {
